@@ -1,19 +1,11 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { View, Text, StyleSheet } from 'react-native';
 
 const SecondScreen = () => {
-  const navigation = useNavigation();
-
-  const goBack = () => {
-    navigation.goBack(); // Navigate back to the previous screen
-  };
-
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome to the Second Screen!</Text>
-      <Text style={styles.subtitle}>You navigated here successfully.</Text>
-      <Button title="Go Back" onPress={goBack} />
+      <Text style={styles.title}>Welcome to the Second Screen</Text>
+      <Text style={styles.subtitle}>Swipe right to go back to the Home Screen</Text>
     </View>
   );
 };
@@ -23,8 +15,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 20,
-    backgroundColor: '#f8f9fa',
+    backgroundColor: '#e0f7fa',
   },
   title: {
     fontSize: 24,
@@ -33,8 +24,7 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     fontSize: 16,
-    marginBottom: 20,
-    textAlign: 'center',
+    color: '#666',
   },
 });
 

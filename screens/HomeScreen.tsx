@@ -1,19 +1,11 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { View, Text, StyleSheet } from 'react-native';
 
 const HomeScreen = () => {
-  const navigation = useNavigation();
-
-  const navigateToAnotherScreen = () => {
-    navigation.navigate('SecondScreen'); // Replace 'AnotherScreen' with your target screen name
-  };
-
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome to the Home Screen!</Text>
-      <Text style={styles.subtitle}>This is the main hub of your app.</Text>
-      <Button title="Go to Another Screen" onPress={navigateToAnotherScreen} />
+      <Text style={styles.title}>Welcome to the Home Screen</Text>
+      <Text style={styles.subtitle}>Swipe left to go to the Second Screen</Text>
     </View>
   );
 };
@@ -23,8 +15,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 20,
-    backgroundColor: '#fff',
+    backgroundColor: '#f5f5f5',
   },
   title: {
     fontSize: 24,
@@ -33,8 +24,7 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     fontSize: 16,
-    marginBottom: 20,
-    textAlign: 'center',
+    color: '#666',
   },
 });
 

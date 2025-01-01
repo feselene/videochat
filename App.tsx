@@ -1,18 +1,23 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from './screens/HomeScreen'; // Path to your HomeScreen
-import SecondScreen from './screens/SecondScreen'; // Path to your SecondScreen
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import HomeScreen from './screens/HomeScreen';
+import SecondScreen from './screens/SecondScreen';
 
-const Stack = createStackNavigator();
+const Tab = createMaterialTopTabNavigator();
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="SecondScreen" component={SecondScreen} />
-      </Stack.Navigator>
+      <Tab.Navigator
+        screenOptions={{
+          swipeEnabled: true,
+          tabBarStyle: { display: 'none' },
+        }}
+      >
+        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="SecondScreen" component={SecondScreen} />
+      </Tab.Navigator>
     </NavigationContainer>
   );
 };
