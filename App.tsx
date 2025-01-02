@@ -3,15 +3,17 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './screens/HomeScreen'; // Path to your HomeScreen
 import SecondScreen from './screens/SecondScreen'; // Path to your SecondScreen
+import CafeScreen from './screens/CafeScreen';
 
 const Stack = createStackNavigator();
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="SecondScreen" component={SecondScreen} />
+      <Stack.Navigator initialRouteName="Home" >
+        <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }}/>
+        <Stack.Screen name="Cafe" component={CafeScreen} options={{ headerShown: false }}/>
+        <Stack.Screen name="SecondScreen" component={SecondScreen} options={{ headerShown: false }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
