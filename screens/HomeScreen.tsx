@@ -6,7 +6,7 @@ const HomeScreen = () => {
   const navigation = useNavigation();
 
   const navigateToAnotherScreen = () => {
-    navigation.navigate('SecondScreen'); // Replace 'AnotherScreen' with your target screen name
+    navigation.navigate('CafeScreen'); // Replace 'AnotherScreen' with your target screen name
   };
 
   return (
